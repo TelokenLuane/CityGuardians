@@ -12,7 +12,7 @@ COLOR_YELLOW = (255, 255, 0)
 
 
 class Menu:
-    def __init__(self, window):
+    def __init__(self, window: object) -> object:
         self.window = window
         self.surf = pygame.image.load('./asset/City2.png')
         self.rect = self.surf.get_rect(left=0, top=0)
