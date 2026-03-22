@@ -4,7 +4,7 @@
 import pygame
 
 from code.const import WIN_WIDTH, WIN_HEIGHT
-from code.menu import Menu
+from .menu import Menu
 
 class Game:
     def __init__(self):
@@ -12,16 +12,7 @@ class Game:
         self.window = pygame.display.set_mode(size=(WIN_WIDTH, WIN_HEIGHT))
 
     def run(self):
-        pygame.mixer_music.load('./asset/music1.mp3')
-        pygame.mixer_music.play(-1)
-
         while True:
             menu = Menu(self.window)
             menu.run()
             pass
-
-            # Check for all events
-            # for event in pygame.event.get():
-            #     if event.type == pygame.QUIT:
-            #         pygame.quit()  # Close Window
-            #         quit()  # End pygame
